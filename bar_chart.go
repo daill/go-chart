@@ -116,7 +116,16 @@ func (bc BarChart) Render(rp RendererProvider, w io.Writer) error {
 	canvasBox = bc.getDefaultCanvasBox()
 	yr = bc.getRanges()
 	if yr.GetMax()-yr.GetMin() == 0 {
-		return fmt.Errorf("invalid data range; cannot be zero")
+		// return fmt.Errorf("invalid data range; cannot be zero")
+		v := yr.GetMax()
+		if v > 0 {
+			yr.SetMin(0)
+		} else if  v < 0 {
+			yr.SetMax(0)
+		} else {
+			yr.SetMax(0.5)
+			yr.SetMin(0)
+		}
 	}
 	yr = bc.setRangeDomains(canvasBox, yr)
 	yf = bc.getValueFormatters()
