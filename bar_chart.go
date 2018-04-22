@@ -2,12 +2,11 @@ package chart
 
 import (
 	"errors"
-	"fmt"
 	"io"
 	"math"
 
 	"github.com/golang/freetype/truetype"
-	util "github.com/wcharczuk/go-chart/util"
+	"github.com/wcharczuk/go-chart/util"
 )
 
 // BarChart is a chart that draws bars on a range.
