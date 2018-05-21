@@ -17,8 +17,7 @@ func drawChart(res http.ResponseWriter, req *http.Request) {
 				Top: 40,
 			},
 		},
-		Height:   512,
-		BarWidth: 60,
+		Height:   800,
 		XAxis: chart.XAxis{
 			Style: chart.Style{
 				Show: true,

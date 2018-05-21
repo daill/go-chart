@@ -266,16 +266,16 @@ func (bc BubbleChart) drawXAxis(r Renderer, canvasBox Box, xr Range, ticks []Tic
 		var tx int
 		var tb Box
 		for _, t := range ticks {
-			tx = canvasBox.Bottom - xr.Translate(t.Value)
+			tx = canvasBox.Left + xr.Translate(t.Value)
 
 			axisStyle.GetStrokeOptions().WriteToRenderer(r)
-			r.MoveTo(canvasBox.Right, tx)
-			r.LineTo(canvasBox.Right+DefaultHorizontalTickWidth, tx)
+			r.MoveTo(canvasBox.Left, tx)
+			r.LineTo(canvasBox.Left+DefaultVerticalTickHeight, tx)
 			r.Stroke()
 
 			axisStyle.GetTextOptions().WriteToRenderer(r)
 			tb = r.MeasureText(t.Label)
-			Draw.Text(r, t.Label, canvasBox.Right+DefaultYAxisMargin+5, tx+(tb.Height()>>1), axisStyle)
+			Draw.Text(r, t.Label, tx+(tb.Height()>>1),canvasBox.Bottom-20, axisStyle)
 		}
 		//cursor := canvasBox.Left
 		//for index, bubble := range bc.Bubbles {
