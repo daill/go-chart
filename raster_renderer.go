@@ -117,7 +117,7 @@ func (rr *rasterRenderer) FillStroke() {
 	rr.gc.FillStroke()
 }
 
-// Circle fully draws a circle at a given point but does not apply the fill or stroke.
+// Bubble fully draws a circle at a given point but does not apply the fill or stroke.
 func (rr *rasterRenderer) Circle(radius float64, x, y int) {
 	xf := float64(x)
 	yf := float64(y)

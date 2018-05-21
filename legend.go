@@ -120,6 +120,106 @@ func Legend(c *Chart, userDefaults ...Style) Renderable {
 }
 
 // LegendThin is a legend that doesn't obscure the chart area.
+func LegendBarChart(sbc *StackedValueBarChart, userDefaults ...Style) Renderable {
+	return func(r Renderer, cb Box, chartDefaults Style) {
+		legendDefaults := Style{
+			FillColor:   ColorWhite,
+			FontColor:   DefaultTextColor,
+			FontSize:    8.0,
+			StrokeColor: ColorBlack,
+			StrokeWidth: DefaultAxisLineWidth,
+			Padding: Box{
+				Top:    2,
+				Left:   7,
+				Right:  7,
+				Bottom: 5,
+			},
+		}
+
+		var legendStyle Style
+		if len(userDefaults) > 0 {
+			legendStyle = userDefaults[0].InheritFrom(chartDefaults.InheritFrom(legendDefaults))
+		} else {
+			legendStyle = chartDefaults.InheritFrom(legendDefaults)
+		}
+
+		r.SetFont(legendStyle.GetFont())
+		r.SetFontColor(legendStyle.GetFontColor())
+		r.SetFontSize(legendStyle.GetFontSize())
+
+		var labels []string
+		var lines []Style
+		for _, b := range sbc.Bars {
+			if len(lines) == 0 {
+				for index, bv := range b.Values {
+					if bv.Style.IsZero() || bv.Style.Show {
+						labels = append(labels, bv.Title)
+						lines = append(lines, bv.Style.InheritFrom(sbc.styleDefaultsStackedValueBarValue(index)))
+					}
+				}
+			}
+		}
+
+		var textHeight int
+		var textWidth int
+		var textBox Box
+		for x := 0; x < len(labels); x++ {
+			if len(labels[x]) > 0 {
+				textBox = r.MeasureText(labels[x])
+				textHeight = util.Math.MaxInt(textBox.Height(), textHeight)
+				textWidth = util.Math.MaxInt(textBox.Width(), textWidth)
+			}
+		}
+
+		legendBoxHeight := textHeight + legendStyle.Padding.Top + legendStyle.Padding.Bottom
+		chartPadding := cb.Top
+		legendYMargin := (chartPadding - legendBoxHeight) >> 1
+
+		legendBox := Box{
+			Left:   cb.Left,
+			Right:  cb.Right,
+			Top:    legendYMargin,
+			Bottom: legendYMargin + legendBoxHeight,
+		}
+
+		Draw.Box(r, legendBox, legendDefaults)
+
+		r.SetFont(legendStyle.GetFont())
+		r.SetFontColor(legendStyle.GetFontColor())
+		r.SetFontSize(legendStyle.GetFontSize())
+
+		lineTextGap := 5
+		lineLengthMinimum := 25
+
+		tx := legendBox.Left + legendStyle.Padding.Left
+		ty := legendYMargin + legendStyle.Padding.Top + textHeight
+		var label string
+		var lx, ly int
+		th2 := textHeight >> 1
+		for index := range labels {
+			label = labels[index]
+			if len(label) > 0 {
+				textBox = r.MeasureText(label)
+				r.Text(label, tx, ty)
+
+				lx = tx + textBox.Width() + lineTextGap
+				ly = ty - th2
+
+				r.SetStrokeColor(lines[index].GetStrokeColor())
+				r.SetStrokeWidth(lines[index].GetStrokeWidth())
+				r.SetStrokeDashArray(lines[index].GetStrokeDashArray())
+
+				r.MoveTo(lx, ly)
+				r.LineTo(lx+lineLengthMinimum, ly)
+				r.Stroke()
+
+				tx += textBox.Width() + DefaultMinimumTickHorizontalSpacing + lineTextGap + lineLengthMinimum
+			}
+		}
+	}
+}
+
+// LegendThin is a legend that doesn't obscure the chart area.
 func LegendThin(c *Chart, userDefaults ...Style) Renderable {
 	return func(r Renderer, cb Box, chartDefaults Style) {
 		legendDefaults := Style{

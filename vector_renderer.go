@@ -141,7 +141,7 @@ func (vr *vectorRenderer) drawPath(s Style) {
 	vr.p = []string{} // clear the path
 }
 
-// Circle implements the interface method.
+// Bubble implements the interface method.
 func (vr *vectorRenderer) Circle(radius float64, x, y int) {
 	vr.c.Circle(x, y, int(radius), vr.s.GetFillAndStrokeOptions())
 }

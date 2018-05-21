@@ -9,8 +9,8 @@ import (
 )
 
 func drawChart(res http.ResponseWriter, req *http.Request) {
-	sbc := chart.BarChart{
-		Title:      "Test Bar Chart",
+	sbc := chart.BubbleChart {
+		Title:      "Test Bubble Chart",
 		TitleStyle: chart.StyleShow(),
 		Background: chart.Style{
 			Padding: chart.Box{
@@ -19,22 +19,22 @@ func drawChart(res http.ResponseWriter, req *http.Request) {
 		},
 		Height:   512,
 		BarWidth: 60,
-		XAxis: chart.Style{
-			Show: true,
+		XAxis: chart.XAxis{
+			Style: chart.Style{
+				Show: true,
+			},
 		},
 		YAxis: chart.YAxis{
 			Style: chart.Style{
 				Show: true,
 			},
 		},
-		Bars: []chart.Value{
-			{Value: 5.25, Label: "Blue"},
-			{Value: 4.88, Label: "Green"},
-			{Value: 4.74, Label: "Gray"},
-			{Value: 3.22, Label: "Orange"},
-			{Value: 3, Label: "Test"},
-			{Value: 2.27, Label: "??"},
-			{Value: 1, Label: "!!"},
+		Bubbles: []chart.BubbleValue{
+			{Value: chart.Value{Value: 2.55, Label: "Blue"}, YVal: 1.0, XVal: 1.0},
+			{Value: chart.Value{Value: 1, Label: "Blue"}, YVal: 4.0, XVal: 2.0},
+			{Value: chart.Value{Value: 4.2, Label: "Blue"}, YVal: 5.0, XVal: 3.0},
+			{Value: chart.Value{Value: 3.2, Label: "Blue"}, YVal: 1.0, XVal: 1.0},
+			{Value: chart.Value{Value: 5.5, Label: "Blue"}, YVal: 1.5, XVal: 1.6},
 		},
 	}
 

@@ -1,12 +1,14 @@
 package chart
 
-import util "github.com/wcharczuk/go-chart/util"
+import util "daill.de/go-chart/util"
+
 
 // Value is a chart value.
 type Value struct {
 	Style Style
 	Label string
 	Value float64
+	Title  string
 }
 
 // Values is an array of Value.

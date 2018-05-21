@@ -241,6 +241,14 @@ func (d draw) Annotation(r Renderer, canvasBox Box, style Style, lx, ly int, lab
 	r.Text(label, textX, textY)
 }
 
+// Bubble with given style
+func (d draw) Circle(r Renderer, c Bubble, s Style) {
+	s.GetFillAndStrokeOptions().WriteToRenderer(r)
+	defer r.ResetStyle()
+	r.Circle(float64(c.Radius), c.MidPointX, c.MidPointY)
+	r.FillStroke()
+}
+
 // Box draws a box with a given style.
 func (d draw) Box(r Renderer, b Box, s Style) {
 	s.GetFillAndStrokeOptions().WriteToRenderer(r)
