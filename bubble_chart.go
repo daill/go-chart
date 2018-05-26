@@ -132,12 +132,12 @@ func (bc BubbleChart) Render(rp RendererProvider, w io.Writer) error {
 		yr = bc.setYRangeDomains(canvasBox, yr)
 
 		xt = bc.getXAxesTicks(r, xr, xf)
-		canvasBox = bc.getAdjustedCanvasBox(r, canvasBox, xr, xt)
-		xr = bc.setYRangeDomains(canvasBox, xr)
+		//canvasBox = bc.getAdjustedCanvasBox(r, canvasBox, xr, xt)
+		xr = bc.setXRangeDomains(canvasBox, xr)
 	}
 
 	bc.drawCanvas(r, canvasBox)
-	bc.drawBubbles(r, canvasBox, yr)
+	//bc.drawBubbles(r, canvasBox, yr)
 	bc.drawXAxis(r, canvasBox, xr, xt)
 	bc.drawYAxis(r, canvasBox, yr, yt)
 
@@ -248,35 +248,31 @@ func (bc BubbleChart) drawBubbles(r Renderer, canvasBox Box, yr Range) {
 }
 
 func (bc BubbleChart) drawXAxis(r Renderer, canvasBox Box, xr Range, ticks []Tick) {
-	//scale := float64(xr.GetDomain())/xr.GetMax()
-
 
 	if bc.XAxis.Style.Show {
 		axisStyle := bc.XAxis.Style.InheritFrom(bc.styleDefaultsAxes())
 		axisStyle.WriteToRenderer(r)
 
-		r.MoveTo(canvasBox.Left, canvasBox.Bottom)
-		r.LineTo(canvasBox.Right, canvasBox.Bottom)
-		r.Stroke()
+		Draw.Box(r, Box{200,200,400,400, true}, bc.getCanvasStyle())
 
-		r.MoveTo(canvasBox.Left, canvasBox.Bottom)
-		r.LineTo(canvasBox.Left, canvasBox.Bottom+DefaultVerticalTickHeight)
-		r.Stroke()
+		//r.MoveTo(canvasBox.Left, canvasBox.Bottom)
+		//r.LineTo(canvasBox.Right, canvasBox.Bottom-DefaultHorizontalTickWidth)
+		//r.Stroke()
 
-		var tx int
-		var tb Box
-		for _, t := range ticks {
-			tx = canvasBox.Left + xr.Translate(t.Value)
+		//var tx int
+		//var tb Box
+		//for _, t := range ticks {
+			//tx = canvasBox.Left + xr.Translate(t.Value)
+			//
+			//axisStyle.GetStrokeOptions().WriteToRenderer(r)
+			//r.MoveTo(canvasBox.Left, canvasBox.Bottom)
+			//r.LineTo(tx, canvasBox.Bottom)
+			//r.Stroke()
 
-			axisStyle.GetStrokeOptions().WriteToRenderer(r)
-			r.MoveTo(canvasBox.Left, tx)
-			r.LineTo(canvasBox.Left+DefaultVerticalTickHeight, tx)
-			r.Stroke()
-
-			axisStyle.GetTextOptions().WriteToRenderer(r)
-			tb = r.MeasureText(t.Label)
-			Draw.Text(r, t.Label, tx+(tb.Height()>>1),canvasBox.Bottom-20, axisStyle)
-		}
+			//axisStyle.GetTextOptions().WriteToRenderer(r)
+			//tb = r.MeasureText(t.Label)
+			//Draw.Text(r, t.Label, tx+(tb.Left >> 1),canvasBox.Bottom+40, axisStyle)
+		//}
 		//cursor := canvasBox.Left
 		//for index, bubble := range bc.Bubbles {
 		//	barLabelBox := Box{

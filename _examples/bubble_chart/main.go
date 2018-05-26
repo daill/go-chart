@@ -12,12 +12,13 @@ func drawChart(res http.ResponseWriter, req *http.Request) {
 	sbc := chart.BubbleChart {
 		Title:      "Test Bubble Chart",
 		TitleStyle: chart.StyleShow(),
+
 		Background: chart.Style{
 			Padding: chart.Box{
 				Top: 40,
 			},
 		},
-		Height:   800,
+		Height:   500,
 		XAxis: chart.XAxis{
 			Style: chart.Style{
 				Show: true,
@@ -32,7 +33,7 @@ func drawChart(res http.ResponseWriter, req *http.Request) {
 			{Value: chart.Value{Value: 2.55, Label: "Blue"}, YVal: 1.0, XVal: 1.0},
 			{Value: chart.Value{Value: 1, Label: "Blue"}, YVal: 4.0, XVal: 2.0},
 			{Value: chart.Value{Value: 4.2, Label: "Blue"}, YVal: 5.0, XVal: 3.0},
-			{Value: chart.Value{Value: 3.2, Label: "Blue"}, YVal: 1.0, XVal: 1.0},
+			{Value: chart.Value{Value:  3.2, Label: "Blue"}, YVal: 1.0, XVal: 1.0},
 			{Value: chart.Value{Value: 5.5, Label: "Blue"}, YVal: 1.5, XVal: 1.6},
 		},
 	}
