@@ -32,59 +32,80 @@
       <file leaf-file-name="bubble_chart.go" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bubble_chart.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="255" column="67" selection-start-line="255" selection-start-column="67" selection-end-line="255" selection-end-column="67" />
-              <folding>
-                <element signature="e#15#114#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="341">
+              <caret line="250" column="65" selection-start-line="250" selection-start-column="65" selection-end-line="250" selection-end-column="65" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bubble_value.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bubble_value.go">
+      <file leaf-file-name="colors.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/colors.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+            <state relative-caret-position="422">
+              <caret line="178" selection-start-line="178" selection-end-line="178" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="box.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/box.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
-              <caret line="28" column="14" lean-forward="true" selection-start-line="28" selection-start-column="14" selection-end-line="28" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="output.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_examples/annotations/output.png">
-          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
       <file leaf-file-name="draw.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/draw.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="252" column="14" selection-start-line="252" selection-start-column="14" selection-end-line="252" selection-end-column="14" />
+            <state relative-caret-position="302">
+              <caret line="82" column="29" selection-start-line="82" selection-start-column="21" selection-end-line="82" selection-end-column="29" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="continuous_range.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/continuous_range.go">
+      <file leaf-file-name="renderer.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/renderer.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-519" />
+            <state relative-caret-position="191">
+              <caret line="60" column="6" selection-start-line="60" selection-start-column="6" selection-end-line="60" selection-end-column="6" />
+            </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="axis.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/axis.go">
+      <file leaf-file-name="style.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/style.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+            <state relative-caret-position="304">
+              <caret line="409" selection-start-line="409" selection-end-line="409" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="color.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../github.com/wcharczuk/go-chart/drawing/color.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="205">
+              <caret line="85" selection-start-line="85" selection-end-line="85" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_examples/basic/main.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="247">
+              <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_examples/bar_chart/main.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="65">
+              <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bar_chart.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bar_chart.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="432">
+              <caret line="256" column="37" lean-forward="true" selection-start-line="256" selection-start-column="37" selection-end-line="256" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -92,17 +113,8 @@
       <file leaf-file-name="main.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_examples/bubble_chart/main.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="35" column="39" selection-start-line="35" selection-start-column="39" selection-end-line="35" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="colors.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../github.com/wcharczuk/go-chart/colors.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="57" column="33" selection-start-line="57" selection-start-column="23" selection-end-line="57" selection-end-column="33" />
+            <state relative-caret-position="247">
+              <caret line="25" column="31" lean-forward="true" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -126,12 +138,14 @@
       <find>Domain</find>
       <find>func .* translate</find>
       <find>5</find>
+      <find>func.*Translate</find>
+      <find>DefaultBar</find>
     </findStrings>
     <replaceStrings>
       <replace>StackedValueBar</replace>
     </replaceStrings>
   </component>
-  <component name="GOROOT" path="/usr/local/Cellar/go/1.10.2/libexec" />
+  <component name="GOROOT" path="/usr/lib/go-1.10" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -155,6 +169,7 @@
         <option value="$PROJECT_DIR$/bubble.go" />
         <option value="$PROJECT_DIR$/bar_chart.go" />
         <option value="$PROJECT_DIR$/draw.go" />
+        <option value="$PROJECT_DIR$/continuous_range.go" />
         <option value="$PROJECT_DIR$/_examples/bubble_chart/main.go" />
         <option value="$PROJECT_DIR$/bubble_chart.go" />
       </list>
@@ -169,10 +184,11 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="y" value="22" />
-    <option name="width" value="1920" />
-    <option name="height" value="1178" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1920" />
+    <option name="y" value="27" />
+    <option name="width" value="1717" />
+    <option name="height" value="905" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -180,8 +196,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -193,18 +207,6 @@
               <item name="go-chart" type="b2602c69:ProjectViewProjectNode" />
               <item name="go-chart" type="462c0819:PsiDirectoryNode" />
               <item name="_examples" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="go-chart" type="b2602c69:ProjectViewProjectNode" />
-              <item name="go-chart" type="462c0819:PsiDirectoryNode" />
-              <item name="_examples" type="462c0819:PsiDirectoryNode" />
-              <item name="annotations" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="go-chart" type="b2602c69:ProjectViewProjectNode" />
-              <item name="go-chart" type="462c0819:PsiDirectoryNode" />
-              <item name="_examples" type="462c0819:PsiDirectoryNode" />
-              <item name="axes" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="go-chart" type="b2602c69:ProjectViewProjectNode" />
@@ -224,10 +226,18 @@
               <item name="_examples" type="462c0819:PsiDirectoryNode" />
               <item name="bubble_chart" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="go-chart" type="b2602c69:ProjectViewProjectNode" />
+              <item name="go-chart" type="462c0819:PsiDirectoryNode" />
+              <item name="_examples" type="462c0819:PsiDirectoryNode" />
+              <item name="custom_ranges" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -362,14 +372,16 @@
       <workItem from="1527056329666" duration="914000" />
       <workItem from="1527057253149" duration="707000" />
       <workItem from="1527078903182" duration="8522000" />
+      <workItem from="1527331975212" duration="1958000" />
+      <workItem from="1527364660413" duration="5448000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40593000" />
+    <option name="totallyTimeSpent" value="51340000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1920" height="1178" extended-state="0" />
+    <frame x="1920" y="25" width="1920" height="1010" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -381,26 +393,26 @@
       <window_info anchor="right" id="Maven Projects" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32986766" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32906976" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="3" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21246007" />
-      <window_info anchor="right" id="Database" order="7" weight="0.32960597" />
-      <window_info anchor="right" id="SciView" order="9" />
-      <window_info anchor="right" id="Structure" order="10" side_tool="true" visible="true" weight="0.24973376" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19382322" />
+      <window_info anchor="right" id="Database" order="7" sideWeight="0.49917355" weight="0.32960597" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32941177" />
+      <window_info anchor="right" id="Structure" order="10" sideWeight="0.5008264" visible="true" weight="0.32960597" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.2967864" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.29651162" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Messages" order="7" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32941177" />
+      <window_info anchor="right" id="SciView" order="9" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -411,11 +423,33 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="13" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/drawing/matrix.go</url>
+          <line>159</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/market_hours_range.go</url>
+          <line>183</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/drawing/stack_graphic_context.go</url>
+          <line>73</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="23" />
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="setValue">
+      <expression>
+        <expression-string>120</expression-string>
+        <language-id>go</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>10</expression-string>
         <language-id>go</language-id>
@@ -431,35 +465,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/stacked_bar_chart_with_values.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="658">
-          <caret line="146" column="28" selection-start-line="146" selection-start-column="28" selection-end-line="146" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../github.com/wcharczuk/go-chart/bar_chart.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="36" column="20" selection-start-line="36" selection-start-column="15" selection-end-line="36" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_examples/stacked_bar/main.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="26" column="26" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../github.com/wcharczuk/go-chart/stacked_bar_chart.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="26" column="1" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BubbleValue.go" />
     <entry file="file://$PROJECT_DIR$/value.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="429">
@@ -469,22 +474,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bubble.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
+        <state relative-caret-position="182">
           <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bar_chart.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3015">
-          <caret line="208" selection-start-line="208" selection-end-line="208" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/yaxis.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="65" column="16" selection-start-line="65" selection-start-column="16" selection-end-line="65" selection-end-column="24" />
+        <state relative-caret-position="897">
+          <caret line="73" column="25" selection-start-line="73" selection-start-column="25" selection-end-line="73" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -495,13 +493,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/renderer.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="50" column="23" lean-forward="true" selection-start-line="50" selection-start-column="23" selection-end-line="50" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_examples/axes/main.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="303">
@@ -509,20 +500,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/idea.vmoptions">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="33" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/idea.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="8" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/idea.vmoptions" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/idea.properties" />
     <entry file="file://$PROJECT_DIR$/_examples/twoaxis/output.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -530,13 +509,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="840">
           <caret line="60" column="16" selection-start-line="60" selection-start-column="16" selection-end-line="60" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/range.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="597">
-          <caret line="41" column="4" selection-start-line="41" selection-start-column="4" selection-end-line="41" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -550,13 +522,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/style.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="42" column="4" selection-start-line="42" selection-start-column="4" selection-end-line="42" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/drawing/color.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
@@ -564,31 +529,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_examples/bar_chart/main.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="22" column="22" lean-forward="true" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/colors.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="14" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_examples/custom_ranges/main.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
+        <state relative-caret-position="286">
           <caret line="26" column="17" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/_examples/pie_chart/main.go">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_examples/basic/main.go">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/_examples/simple_moving_average/output.png">
@@ -637,13 +585,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../github.com/wcharczuk/go-chart/chart.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="558" column="22" selection-start-line="558" selection-start-column="22" selection-end-line="558" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../github.com/wcharczuk/go-chart/colors.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="232">
@@ -656,11 +597,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/_examples/axes/output.png">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/continuous_range.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-519" />
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/_examples/stock_analysis/main.go">
       <provider selected="true" editor-type-id="text-editor">
@@ -678,16 +614,9 @@
     <entry file="file://$PROJECT_DIR$/_examples/annotations/output.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/_examples/bubble_chart/main.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="35" column="39" selection-start-line="35" selection-start-column="39" selection-end-line="35" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bubble_value.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
+        <state relative-caret-position="91">
           <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
         </state>
       </provider>
@@ -706,20 +635,118 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/raster_renderer.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1365">
+          <caret line="114" column="31" selection-start-line="114" selection-start-column="28" selection-end-line="114" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../github.com/wcharczuk/go-chart/drawing/stack_graphic_context.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1430">
+          <caret line="115" selection-start-line="115" selection-end-line="115" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../github.com/wcharczuk/go-chart/drawing/path.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1001">
+          <caret line="80" selection-start-line="80" selection-end-line="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/range.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/continuous_range.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="616">
+          <caret line="69" column="23" selection-start-line="69" selection-start-column="18" selection-end-line="69" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_examples/basic/output.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_examples/basic/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_examples/bar_chart/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="65">
+          <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../github.com/wcharczuk/go-chart/chart.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="107">
+          <caret line="494" column="52" lean-forward="true" selection-start-line="494" selection-start-column="51" selection-end-line="494" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/colors.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="422">
+          <caret line="178" selection-start-line="178" selection-end-line="178" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../github.com/wcharczuk/go-chart/drawing/color.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="85" selection-start-line="85" selection-end-line="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/style.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="409" selection-start-line="409" selection-end-line="409" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_examples/bubble_chart/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="25" column="31" lean-forward="true" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bar_chart.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="256" column="37" lean-forward="true" selection-start-line="256" selection-start-column="37" selection-end-line="256" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/renderer.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="60" column="6" selection-start-line="60" selection-start-column="6" selection-end-line="60" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/draw.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="252" column="14" selection-start-line="252" selection-start-column="14" selection-end-line="252" selection-end-column="14" />
+        <state relative-caret-position="302">
+          <caret line="82" column="29" selection-start-line="82" selection-start-column="21" selection-end-line="82" selection-end-column="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bubble_chart.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="255" column="67" selection-start-line="255" selection-start-column="67" selection-end-line="255" selection-end-column="67" />
-          <folding>
-            <element signature="e#15#114#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="341">
+          <caret line="250" column="65" selection-start-line="250" selection-start-column="65" selection-end-line="250" selection-end-column="65" />
         </state>
       </provider>
     </entry>

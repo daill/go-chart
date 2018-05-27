@@ -6,6 +6,7 @@ import (
 	"math"
 	"github.com/golang/freetype/truetype"
 	"daill.de/go-chart/util"
+	"fmt"
 )
 
 // BarChart is a chart that draws bars on a range.
@@ -19,7 +20,7 @@ type BubbleChart struct {
 	Height int
 	DPI    float64
 
-	BarWidth int
+	BubbleScale float64
 
 	Background Style
 	Canvas     Style
@@ -66,12 +67,11 @@ func (bc BubbleChart) GetHeight() int {
 	return bc.Height
 }
 
-// GetBarWidth returns the default bar width.
-func (bc BubbleChart) GetBarWidth() int {
-	if bc.BarWidth == 0 {
-		return DefaultBarWidth
+func (bc BubbleChart) getBubbleScale() float64 {
+	if bc.BubbleScale == 0 {
+		return 1
 	}
-	return bc.BarWidth
+	return bc.BubbleScale
 }
 
 // Render renders the chart with the given renderer to the given io.Writer.
@@ -137,7 +137,7 @@ func (bc BubbleChart) Render(rp RendererProvider, w io.Writer) error {
 	}
 
 	bc.drawCanvas(r, canvasBox)
-	//bc.drawBubbles(r, canvasBox, yr)
+	bc.drawBubbles(r, canvasBox, xr, yr)
 	bc.drawXAxis(r, canvasBox, xr, xt)
 	bc.drawYAxis(r, canvasBox, yr, yt)
 
@@ -230,22 +230,28 @@ func (bc BubbleChart) drawBackground(r Renderer) {
 	}, bc.getBackgroundStyle())
 }
 
-func (bc BubbleChart) drawBubbles(r Renderer, canvasBox Box, yr Range) {
+func (bc BubbleChart) drawBubbles(r Renderer, canvasBox Box, xr, yr Range) {
 	xoffset := canvasBox.Left
-
+	yoffset := canvasBox.Bottom
 
 	var bubbleBox Bubble
-	for index, bubble := range bc.Bubbles {
+	var tb Box
+	var text string
+ 	for index, bubble := range bc.Bubbles {
 		bubbleBox = Bubble{
-			MidPointX: int(bubble.XVal),
-			MidPointY: int(bubble.YVal),
-			Radius: int(bubble.Value.Value),
+			MidPointX: xoffset+int(xr.Translate(bubble.XVal)),
+			MidPointY: yoffset-int(yr.Translate(bubble.YVal)),
+			Radius: int(bubble.Value.Value*bc.getBubbleScale()),
 		}
 
 		Draw.Circle(r, bubbleBox, bubble.Value.Style.InheritFrom(bc.styleDefaultsBar(index)))
-		xoffset += int(bubble.YVal)
+
+		text = fmt.Sprintf("%v", bubble.Value.Value)
+		tb = r.MeasureText(text)
+		Draw.Text(r, text, xoffset+int(xr.Translate(bubble.XVal)), yoffset-int(yr.Translate(bubble.YVal))+(tb.Height())+int(bubble.Value.Value*bc.getBubbleScale()), bubble.Value.Style.InheritFrom(bc.styleDefaultsAxes()))
 	}
 }
+
 
 func (bc BubbleChart) drawXAxis(r Renderer, canvasBox Box, xr Range, ticks []Tick) {
 
@@ -253,26 +259,29 @@ func (bc BubbleChart) drawXAxis(r Renderer, canvasBox Box, xr Range, ticks []Tic
 		axisStyle := bc.XAxis.Style.InheritFrom(bc.styleDefaultsAxes())
 		axisStyle.WriteToRenderer(r)
 
-		Draw.Box(r, Box{200,200,400,400, true}, bc.getCanvasStyle())
+		r.MoveTo(canvasBox.Left, canvasBox.Bottom)
+		r.LineTo(canvasBox.Right, canvasBox.Bottom)
+		r.Stroke()
 
-		//r.MoveTo(canvasBox.Left, canvasBox.Bottom)
-		//r.LineTo(canvasBox.Right, canvasBox.Bottom-DefaultHorizontalTickWidth)
-		//r.Stroke()
+		r.MoveTo(canvasBox.Left, canvasBox.Bottom)
+		r.LineTo(canvasBox.Left, canvasBox.Bottom+DefaultVerticalTickHeight)
+		r.Stroke()
 
-		//var tx int
-		//var tb Box
-		//for _, t := range ticks {
-			//tx = canvasBox.Left + xr.Translate(t.Value)
-			//
-			//axisStyle.GetStrokeOptions().WriteToRenderer(r)
-			//r.MoveTo(canvasBox.Left, canvasBox.Bottom)
-			//r.LineTo(tx, canvasBox.Bottom)
-			//r.Stroke()
 
-			//axisStyle.GetTextOptions().WriteToRenderer(r)
-			//tb = r.MeasureText(t.Label)
-			//Draw.Text(r, t.Label, tx+(tb.Left >> 1),canvasBox.Bottom+40, axisStyle)
-		//}
+		var tx int
+		var tb Box
+		for _, t := range ticks {
+			tx = canvasBox.Left + xr.Translate(t.Value)
+
+			axisStyle.GetStrokeOptions().WriteToRenderer(r)
+			r.MoveTo(tx, canvasBox.Bottom)
+			r.LineTo(tx, canvasBox.Bottom+DefaultVerticalTickHeight)
+			r.Stroke()
+
+			axisStyle.GetTextOptions().WriteToRenderer(r)
+			tb = r.MeasureText(t.Label)
+			Draw.Text(r, t.Label, tx-(tb.Width()>>1), canvasBox.Bottom+DefaultXAxisMargin+10, axisStyle)
+		}
 		//cursor := canvasBox.Left
 		//for index, bubble := range bc.Bubbles {
 		//	barLabelBox := Box{
@@ -452,7 +461,7 @@ func (bc BubbleChart) getAdjustedCanvasBox(r Renderer, canvasBox Box, yrange Ran
 				barLabelBox := Box{
 					Top:    canvasBox.Bottom + DefaultXAxisMargin,
 					Left:   cursor,
-					Right:  cursor + bc.GetBarWidth(),
+					Right:  cursor + DefaultBarWidth,
 					Bottom: bc.GetHeight(),
 				}
 				lines := Text.WrapFit(r, bubble.Value.Label, barLabelBox.Width(), axisStyle)
