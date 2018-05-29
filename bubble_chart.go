@@ -6,7 +6,7 @@ import (
 	"math"
 	"github.com/golang/freetype/truetype"
 	"daill.de/go-chart/util"
-	"fmt"
+	"sort"
 )
 
 // BarChart is a chart that draws bars on a range.
@@ -235,8 +235,14 @@ func (bc BubbleChart) drawBubbles(r Renderer, canvasBox Box, xr, yr Range) {
 	yoffset := canvasBox.Bottom
 
 	var bubbleBox Bubble
-	var tb Box
-	var text string
+	//var tb Box
+	//var text string
+
+	// sort slice to achieve correct overlay order .. from high to low
+	sort.Slice(bc.Bubbles, func(i, j int) bool {
+		return bc.Bubbles[i].Value.Value > bc.Bubbles[j].Value.Value
+	})
+
  	for index, bubble := range bc.Bubbles {
 		bubbleBox = Bubble{
 			MidPointX: xoffset+int(xr.Translate(bubble.XVal)),
@@ -246,9 +252,9 @@ func (bc BubbleChart) drawBubbles(r Renderer, canvasBox Box, xr, yr Range) {
 
 		Draw.Circle(r, bubbleBox, bubble.Value.Style.InheritFrom(bc.styleDefaultsBar(index)))
 
-		text = fmt.Sprintf("%v", bubble.Value.Value)
-		tb = r.MeasureText(text)
-		Draw.Text(r, text, xoffset+int(xr.Translate(bubble.XVal)), yoffset-int(yr.Translate(bubble.YVal))+(tb.Height())+int(bubble.Value.Value*bc.getBubbleScale()), bubble.Value.Style.InheritFrom(bc.styleDefaultsAxes()))
+		//text = fmt.Sprintf("%v", bubble.Value.Value)
+		//tb = r.MeasureText(text)
+		//Draw.Text(r, text, xoffset+int(xr.Translate(bubble.XVal)), yoffset-int(yr.Translate(bubble.YVal))+(tb.Height())+int(bubble.Value.Value*bc.getBubbleScale()), bubble.Value.Style.InheritFrom(bc.styleDefaultsAxes()))
 	}
 }
 

@@ -15,7 +15,7 @@ func drawChart(res http.ResponseWriter, req *http.Request) {
 
 		Background: chart.Style{
 			Padding: chart.Box{
-				Top: 40,
+				Top: 100,
 			},
 		},
 		BubbleScale: 2.7,
@@ -33,9 +33,9 @@ func drawChart(res http.ResponseWriter, req *http.Request) {
 			},
 		},
 		Bubbles: []chart.BubbleValue{
-			{Value: chart.Value{Value: 2.55, Label: "Blue"}, YVal: 1.1, XVal: 1.1},
-			{Value: chart.Value{Value: 1, Label: "Yewllo"}, YVal: 4.0, XVal: 2.0},
+			{Value: chart.Value{Value: 1, Label: "Yellow"}, YVal: 4.0, XVal: 2.0},
 			{Value: chart.Value{Value: 4.2, Label: "Green"}, YVal: 5.0, XVal: 3.0},
+			{Value: chart.Value{Value: 2.55, Label: "Blue"}, YVal: 1.1, XVal: 1.1},
 			{Value: chart.Value{Value:  3.2, Label: "Red"}, YVal: 1.1, XVal: 1.1},
 			{Value: chart.Value{Value: 5.5, Label: "Some"}, YVal: 1.5, XVal: 1.6},
 		},
