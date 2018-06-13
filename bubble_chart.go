@@ -122,8 +122,20 @@ func (bc BubbleChart) Render(rp RendererProvider, w io.Writer) error {
 	yr = bc.setYRangeDomains(canvasBox, yr)
 	yf = bc.getValueFormatters()
 
-	xr = bc.getYRanges()
-	xr = bc.setYRangeDomains(canvasBox, xr)
+	xr = bc.getXRanges()
+	if xr.GetMax()-xr.GetMin() == 0 {
+		// return fmt.Errorf("invalid data range; cannot be zero")
+		v := xr.GetMax()
+		if v > 0 {
+			xr.SetMin(0)
+		} else if  v < 0 {
+			xr.SetMax(0)
+		} else {
+			xr.SetMax(0.5)
+			xr.SetMin(0)
+		}
+	}
+	xr = bc.setXRangeDomains(canvasBox, xr)
 	xf = bc.getValueFormatters()
 
 	if bc.hasAxes() {
