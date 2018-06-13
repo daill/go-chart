@@ -5,8 +5,8 @@ import (
 	"io"
 	"math"
 	"github.com/golang/freetype/truetype"
-	"daill.de/go-chart/util"
 	"sort"
+	"github.com/daill/go-chart/util"
 )
 
 // BarChart is a chart that draws bars on a range.
