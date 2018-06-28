@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"math"
 
-	"github.com/wcharczuk/go-chart/matrix"
-	util "github.com/wcharczuk/go-chart/util"
+	"github.com/daill/go-chart/matrix"
+	util "github.com/daill/go-chart/util"
 )
 
 // PolynomialRegressionSeries implements a polynomial regression over a given

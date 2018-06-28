@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"time"
 
-	util "github.com/wcharczuk/go-chart/util"
+	util "github.com/daill/go-chart/util"
 )
 
 // TimeSeries is a line on a chart.

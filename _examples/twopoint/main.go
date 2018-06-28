@@ -5,7 +5,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/wcharczuk/go-chart"
+	"github.com/daill/go-chart"
 )
 
 func main() {

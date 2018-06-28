@@ -1,6 +1,6 @@
 go-chart
 ========
-[![Build Status](https://travis-ci.org/wcharczuk/go-chart.svg?branch=master)](https://travis-ci.org/wcharczuk/go-chart)[![Go Report Card](https://goreportcard.com/badge/github.com/wcharczuk/go-chart)](https://goreportcard.com/report/github.com/wcharczuk/go-chart)
+[![Build Status](https://travis-ci.org/daill/go-chart.svg?branch=master)](https://travis-ci.org/daill/go-chart)[![Go Report Card](https://goreportcard.com/badge/github.com/daill/go-chart)](https://goreportcard.com/report/github.com/daill/go-chart)
 
 Package `chart` is a very simple golang native charting library that supports timeseries and continuous
 line charts. 
@@ -14,7 +14,7 @@ Master should now be on the v2.x codebase, which brings a couple new features an
 To install `chart` run the following:
 
 ```bash
-> go get -u github.com/wcharczuk/go-chart
+> go get -u github.com/daill/go-chart
 ```
 
 Most of the components are interchangeable so feel free to crib whatever you want. 
@@ -23,27 +23,27 @@ Most of the components are interchangeable so feel free to crib whatever you wan
 
 Spark Lines:
 
-![](https://raw.githubusercontent.com/wcharczuk/go-chart/master/_images/tvix_ltm.png)
+![](https://raw.githubusercontent.com/daill/go-chart/master/_images/tvix_ltm.png)
 
 Single axis:
 
-![](https://raw.githubusercontent.com/wcharczuk/go-chart/master/_images/goog_ltm.png)
+![](https://raw.githubusercontent.com/daill/go-chart/master/_images/goog_ltm.png)
 
 Two axis:
 
-![](https://raw.githubusercontent.com/wcharczuk/go-chart/master/_images/two_axis.png)
+![](https://raw.githubusercontent.com/daill/go-chart/master/_images/two_axis.png)
 
 # Other Chart Types
 
 Pie Chart:
 
-![](https://raw.githubusercontent.com/wcharczuk/go-chart/master/_images/pie_chart.png)
+![](https://raw.githubusercontent.com/daill/go-chart/master/_images/pie_chart.png)
 
 The code for this chart can be found in `_examples/pie_chart/main.go`.
 
 Stacked Bar:
 
-![](https://raw.githubusercontent.com/wcharczuk/go-chart/master/_images/stacked_bar.png)
+![](https://raw.githubusercontent.com/daill/go-chart/master/_images/stacked_bar.png)
 
 The code for this chart can be found in `_examples/stacked_bar/main.go`.
 
@@ -61,7 +61,7 @@ import (
     ...
     "bytes"
     ...
-    "github.com/wcharczuk/go-chart" //exposes "chart"
+    "github.com/daill/go-chart" //exposes "chart"
 )
 
 graph := chart.Chart{

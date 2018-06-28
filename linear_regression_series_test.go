@@ -4,7 +4,7 @@ import (
 	"testing"
 
 	assert "github.com/blend/go-sdk/assert"
-	"github.com/wcharczuk/go-chart/seq"
+	"github.com/daill/go-chart/seq"
 )
 
 func TestLinearRegressionSeries(t *testing.T) {

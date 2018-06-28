@@ -3,7 +3,7 @@ package main
 import (
 	"net/http"
 
-	"github.com/wcharczuk/go-chart"
+	"github.com/daill/go-chart"
 )
 
 func drawChart(res http.ResponseWriter, req *http.Request) {
