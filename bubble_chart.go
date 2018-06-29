@@ -140,11 +140,10 @@ func (bc BubbleChart) Render(rp RendererProvider, w io.Writer) error {
 
 	if bc.hasAxes() {
 		yt = bc.getYAxesTicks(r, yr, yf)
-		canvasBox = bc.getAdjustedCanvasBox(r, canvasBox, yr, yt)
+		canvasBox = bc.getAdjustedCanvasBox(r, canvasBox, xr,yr, xt,yt)
 		yr = bc.setYRangeDomains(canvasBox, yr)
 
 		xt = bc.getXAxesTicks(r, xr, xf)
-		//canvasBox = bc.getAdjustedCanvasBox(r, canvasBox, xr, xt)
 		xr = bc.setXRangeDomains(canvasBox, xr)
 	}
 
@@ -449,56 +448,13 @@ func (bc BubbleChart) getYAxesTicks(r Renderer, yr Range, yf ValueFormatter) (yt
 //	return bc.calculateTotalBarWidth(bc.GetBarWidth(), spacing)
 //}
 
-func (bc BubbleChart) calculateTotalBarWidth() int {
-	// max y value + radius + offset
-	width := 0.0
-	for _, bubble := range bc.Bubbles {
-		width = math.Max(bubble.YVal+bubble.Value.Value, width)
-	}
-	return int(width)
-}
-
-func (bc BubbleChart) calculateScaledTotalWidth(canvasBox Box) int {
-	return bc.calculateTotalBarWidth()
-}
-
-func (bc BubbleChart) getAdjustedCanvasBox(r Renderer, canvasBox Box, yrange Range, yticks []Tick) Box {
+func (bc BubbleChart) getAdjustedCanvasBox(r Renderer, canvasBox Box, xrange, yrange Range, xticks, yticks []Tick) Box {
 	axesOuterBox := canvasBox.Clone()
 
-	totalWidth := bc.calculateScaledTotalWidth(canvasBox)
-
 	if bc.XAxis.Style.Show {
-		xaxisHeight := DefaultVerticalTickHeight
-
-		axisStyle := bc.XAxis.Style.InheritFrom(bc.styleDefaultsAxes())
-		axisStyle.WriteToRenderer(r)
-
-		cursor := canvasBox.Left
-		for _, bubble := range bc.Bubbles {
-			if len(bubble.Value.Label) > 0 {
-				barLabelBox := Box{
-					Top:    canvasBox.Bottom + DefaultXAxisMargin,
-					Left:   cursor,
-					Right:  cursor + DefaultBarWidth,
-					Bottom: bc.GetHeight(),
-				}
-				lines := Text.WrapFit(r, bubble.Value.Label, barLabelBox.Width(), axisStyle)
-				linesBox := Text.MeasureLines(r, lines, axisStyle)
-
-				xaxisHeight = util.Math.MinInt(linesBox.Height()+(2*DefaultXAxisMargin), xaxisHeight)
-			}
-		}
-
-		xbox := Box{
-			Top:    canvasBox.Top,
-			Left:   canvasBox.Left,
-			Right:  canvasBox.Left + totalWidth,
-			Bottom: bc.GetHeight() - xaxisHeight,
-		}
-
-		axesOuterBox = axesOuterBox.Grow(xbox)
+		axesBounds := bc.XAxis.Measure(r, canvasBox, xrange, bc.styleDefaultsAxes(), xticks)
+		axesOuterBox = axesOuterBox.Grow(axesBounds)
 	}
-
 	if bc.YAxis.Style.Show {
 		axesBounds := bc.YAxis.Measure(r, canvasBox, yrange, bc.styleDefaultsAxes(), yticks)
 		axesOuterBox = axesOuterBox.Grow(axesBounds)

@@ -5,7 +5,7 @@ import (
 	"log"
 	"net/http"
 	"os"
-	"daill.de/go-chart"
+	"github.com/daill/go-chart"
 )
 
 func drawChart(res http.ResponseWriter, req *http.Request) {
@@ -19,8 +19,9 @@ func drawChart(res http.ResponseWriter, req *http.Request) {
 			},
 		},
 		BubbleScale: 2.7,
-		Height:   500,
+		Height:   300,
 		XAxis: chart.XAxis{
+			Ticks: []chart.Tick{{0, "0"},{1, "1"}, {2, "2"}, {3, "3"}, {4, "4"}, {5, "5"}, {6, ""}},
 			Style: chart.Style{
 				Show: true,
 				StrokeWidth: 1,
@@ -33,11 +34,8 @@ func drawChart(res http.ResponseWriter, req *http.Request) {
 			},
 		},
 		Bubbles: []chart.BubbleValue{
-			{Value: chart.Value{Value: 1, Label: "Yellow"}, YVal: 4.0, XVal: 2.0},
-			{Value: chart.Value{Value: 4.2, Label: "Green"}, YVal: 5.0, XVal: 3.0},
-			{Value: chart.Value{Value: 2.55, Label: "Blue"}, YVal: 1.1, XVal: 1.1},
-			{Value: chart.Value{Value:  3.2, Label: "Red"}, YVal: 1.1, XVal: 1.1},
-			{Value: chart.Value{Value: 5.5, Label: "Some"}, YVal: 1.5, XVal: 1.6},
+			{Value: chart.Value{Value: 6, Label: "Test User"}, YVal: 252759000000000, XVal: 1},
+			{Value: chart.Value{Value: 0, Label: "Test User 1"}, YVal: 0, XVal: 0},
 		},
 	}
 
