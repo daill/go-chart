@@ -233,14 +233,14 @@ func (sbc StackedValueBarChart) getRanges() Range {
 		}
 	}
 
-	if min < 0 {
-		min = 0
+	if max < 0 {
+		max = 0
 	}
 
-	if max == math.MaxFloat64 {
-		max  = 0
+	if min == math.MaxFloat64 {
+		min  = 0
 	}
-
+	
 	yrange.SetMin(min)
 	yrange.SetMax(max)
 
